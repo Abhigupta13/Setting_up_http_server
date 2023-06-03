@@ -15,7 +15,11 @@ const PORT =3000;
 const server =http.createServer(function exec(request,response){
 
     console.log(request.method);
-    response.end("Hello world")
+    if(request.url =='/home'){
+        response.end("Welcome to home");
+    }
+    else
+    response.end("Hello world");
 });
 
 server.listen(PORT,function process(){
